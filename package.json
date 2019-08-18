@@ -100,7 +100,7 @@
     "sinon": "^4.5.0",
     "typescript": "^2.1.4",
     "webpack": "^4.29.3",
-    "webpack-cli": "^3.2.3",
+    "webpack-cli": "^3.3.7",
     "webpack-rxjs-externals": "~2.0.0"
   }
 }

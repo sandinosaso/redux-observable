@@ -16,6 +16,7 @@ export interface EpicMiddleware<
   D = any
 > extends Middleware<{}, S, Dispatch<any>> {
   run(rootEpic: Epic<T, O, S, D>): void;
+  unsubscribe(): void;
 }
 
 export function createEpicMiddleware<
@@ -108,6 +109,10 @@ export function createEpicMiddleware<
     }
     epic$.next(rootEpic);
   };
+
+  epicMiddleware.unsubscribe = function() {
+    epic$.unsubscribe();
+  }
 
   return epicMiddleware;
 }

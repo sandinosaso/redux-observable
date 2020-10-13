@@ -80,5 +80,9 @@ export function createEpicMiddleware(options = {}) {
     epic$.next(rootEpic);
   };
 
+  epicMiddleware.unsubscribe = () => {
+    epic$.unsubscribe();
+  }
+
   return epicMiddleware;
 }
